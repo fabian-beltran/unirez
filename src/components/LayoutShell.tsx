@@ -10,10 +10,19 @@ const LayoutShell = ({
 }>) => {
 	return (
 		<MantineProvider theme={theme}>
-			<AppShell padding="md" header={{ height: 70 }}>
+			<AppShell
+				padding="md"
+				header={{ height: 70 }}
+				navbar={{
+					width: 200,
+					breakpoint: "sm",
+				}}
+			>
 				<AppShell.Header bg="brand">
 					<AppHeader />
 				</AppShell.Header>
+
+				<AppShell.Navbar>Navbar</AppShell.Navbar>
 
 				<AppShell.Main>
 					<Space h="xl" />
